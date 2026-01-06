@@ -18,7 +18,6 @@ This project addresses the limitations of spatial-only deepfake detectors by int
 
 ⚡ Real-time inference support
 
-🧩 Architecture Overview (DOA-NET)
 Video Input
    ↓
 Frame Extraction
@@ -38,6 +37,7 @@ Eye Region Cropping
    Real / Fake Output
         ↓
    Grad-CAM Visualization
+
 
 🛠️ Tech Stack
 
