@@ -1,0 +1,44 @@
+mkdir -p deepfake_detection/data/real_videos
+mkdir -p deepfake_detection/data/fake_videos  
+mkdir -p deepfake_detection/models
+mkdir -p deepfake_detection/reports
+
+# Install dependencies
+pip install -r requirements.txt
+
+# If you need to download MediaPipe models
+python -c "import mediapipe as mp; mp.solutions.face_mesh.FaceMesh()"
+
+3. Training the Model
+Basic Training:
+
+python train.py --real-dir data/real_videos --fake-dir data/fake_videos
+
+Advanced Training Options:
+# Train with SVM classifier
+python train.py --real-dir data/real_videos --fake-dir data/fake_videos --model-type svm
+
+# Custom model save path
+python train.py --real-dir data/real_videos --fake-dir data/fake_videos --model-path models/my_classifier.pkl
+
+# Skip visualizations (faster)
+python train.py --real-dir data/real_videos --fake-dir data/fake_videos --no-visualizations
+
+
+
+5. Making Predictions
+Single Video Prediction:
+# Basic prediction
+python predict.py --video test_video.mp4
+
+# With detailed HTML report
+python predict.py --video test_video.mp4 --save-report
+
+# With real-time visualization
+python predict.py --video test_video.mp4 --visualize
+
+# All options combined
+python predict.py --video test_video.mp4 --save-report --visualize --model models/classifier.pkl
+
+# Analyze all videos in a directory
+python predict.py --batch-dir test_videos/ --output batch_results.json

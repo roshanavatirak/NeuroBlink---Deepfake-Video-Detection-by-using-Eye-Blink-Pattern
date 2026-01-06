@@ -1,0 +1,75 @@
+{
+  "timestamp": "2025-08-26 21:53:17",
+  "dataset_analysis": {
+    "total_samples": 1986,
+    "real_samples": 990,
+    "fake_samples": 996,
+    "feature_count": 39,
+    "feature_names": [
+      "left_blink_rate",
+      "left_avg_blink_duration",
+      "left_std_blink_duration",
+      "left_max_blink_duration",
+      "left_min_blink_duration",
+      "left_avg_blink_cycle",
+      "left_std_blink_cycle",
+      "left_avg_ear",
+      "left_std_ear",
+      "left_min_ear",
+      "left_max_ear",
+      "left_avg_blink_completeness",
+      "right_blink_rate",
+      "right_avg_blink_duration",
+      "right_std_blink_duration",
+      "right_max_blink_duration",
+      "right_min_blink_duration",
+      "right_avg_blink_cycle",
+      "right_std_blink_cycle",
+      "right_avg_ear",
+      "right_std_ear",
+      "right_min_ear",
+      "right_max_ear",
+      "right_avg_blink_completeness",
+      "avg_blink_rate",
+      "avg_avg_blink_duration",
+      "avg_std_blink_duration",
+      "avg_max_blink_duration",
+      "avg_min_blink_duration",
+      "avg_avg_blink_cycle",
+      "avg_std_blink_cycle",
+      "avg_avg_ear",
+      "avg_std_ear",
+      "avg_min_ear",
+      "avg_max_ear",
+      "avg_avg_blink_completeness",
+      "video_duration",
+      "total_frames",
+      "fps"
+    ]
+  },
+  "training_results": {
+    "accuracy": 0.5,
+    "cv_mean": 0.726312240795868,
+    "cv_std": 0.012360227990763124,
+    "classification_report": "              precision    recall  f1-score   support\n\n           0       0.50      1.00      0.67         1\n           1       0.00      0.00      0.00         1\n\n    accuracy                           0.50         2\n   macro avg       0.25      0.50      0.33         2\nweighted avg       0.25      0.50      0.33         2\n",
+    "confusion_matrix": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "auc_score": 0.8368727434992494,
+    "training_time": 3.3939733505249023,
+    "model_type": "svm",
+    "model_path": "models/classifier.pkl"
+  },
+  "model_info": {
+    "type": "svm",
+    "path": "models/classifier.pkl",
+    "training_time": 3.3939733505249023
+  }
+}
